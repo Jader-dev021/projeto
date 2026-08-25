@@ -1,0 +1,659 @@
+/* =========================================================
+   INSIGNER — GLOBAL
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #f5f5f5;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: #e50914;
+    color: #ffffff;
+}
+
+
+/* ==================== VARIABLES ==================== */
+
+:root {
+    --black: #050505;
+    --black-soft: #0a0a0a;
+
+    --white: #f5f5f5;
+    --gray: #8c8c8c;
+    --gray-dark: #242424;
+
+    --red: #e50914;
+
+    --border: rgba(255, 255, 255, 0.1);
+
+    --container: 1400px;
+}
+
+
+/* ==================== CONTAINER ==================== */
+
+.container {
+    width: min(
+        calc(100% - 80px),
+        var(--container)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(5, 5, 5, 0.75);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar__container {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==================== LOGO ==================== */
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+
+/* ==================== MENU ==================== */
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__link {
+    position: relative;
+
+    color: var(--gray);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease;
+}
+
+.navbar__link::after {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--red);
+
+    transition:
+        width 0.3s ease;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+    color: var(--white);
+}
+
+.navbar__link:hover::after,
+.navbar__link.active::after {
+    width: 100%;
+}
+
+
+/* ==================== CTA ==================== */
+
+.navbar__cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--border);
+
+    font-size: 0.8rem;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar__cta span {
+    color: var(--red);
+}
+
+.navbar__cta:hover {
+    background: rgba(255, 255, 255, 0.05);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================== MOBILE BUTTON ==================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 18px;
+    height: 1px;
+
+    background: var(--white);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ==================== BACKGROUND ==================== */
+
+.hero__background {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.hero__grid {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        transparent 85%
+    );
+}
+
+.hero__glow {
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    top: 10%;
+    right: -250px;
+
+    background: rgba(229, 9, 20, 0.08);
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+}
+
+
+/* ==================== HERO CONTENT ==================== */
+
+.hero__container {
+    position: relative;
+
+    padding-top: 88px;
+}
+
+
+/* ==================== EYEBROW ==================== */
+
+.hero__eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+
+    color: var(--gray);
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+}
+
+.hero__dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 12px rgba(229, 9, 20, 0.7);
+}
+
+
+/* ==================== TITLE ==================== */
+
+.hero__title {
+    max-width: 1050px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(
+        4.5rem,
+        9vw,
+        9.5rem
+    );
+
+    line-height: 0.88;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 600;
+}
+
+.hero__title span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(245, 245, 245, 0.6);
+}
+
+
+/* ==================== HERO BOTTOM ==================== */
+
+.hero__bottom {
+    margin-top: 70px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.hero__description {
+    max-width: 430px;
+
+    color: var(--gray);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==================== BUTTONS ==================== */
+
+.hero__actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 17px 22px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.button span {
+    color: var(--red);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.button:hover span {
+    transform: translate(3px, -3px);
+}
+
+.button--primary {
+    background: var(--white);
+    color: var(--black);
+}
+
+.button--primary:hover {
+    transform: translateY(-3px);
+
+    background: var(--red);
+    color: white;
+}
+
+.button--primary:hover span {
+    color: white;
+}
+
+.button--secondary {
+    border: 1px solid var(--border);
+
+    color: var(--white);
+}
+
+.button--secondary:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ==================== SCROLL ==================== */
+
+.hero__scroll {
+    position: absolute;
+
+    bottom: 40px;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--gray);
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+}
+
+.hero__scroll-line {
+    width: 70px;
+    height: 1px;
+
+    background: var(--gray-dark);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__scroll-line::after {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 100%;
+
+    background: var(--red);
+
+    animation: scrollLine 2s infinite ease-in-out;
+}
+
+@keyframes scrollLine {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(250%);
+    }
+
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+
+/* =========================================================
+   PLACEHOLDER SECTIONS
+   ========================================================= */
+
+.section-placeholder {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid var(--border);
+}
+
+.section-placeholder span {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: var(--red);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
+}
+
+.section-placeholder h2 {
+    max-width: 900px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(
+        3rem,
+        6vw,
+        7rem
+    );
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+}
+
+.section-placeholder strong {
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(245, 245, 245, 0.5);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            var(--container)
+        );
+    }
+
+    .navbar__menu,
+    .navbar__cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero__title {
+        font-size: clamp(
+            4rem,
+            14vw,
+            7rem
+        );
+    }
+
+    .hero__bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 50px;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar__container {
+        height: 76px;
+    }
+
+    .hero__container {
+        padding-top: 76px;
+    }
+
+    .hero__title {
+        font-size: clamp(
+            3.5rem,
+            17vw,
+            5.5rem
+        );
+    }
+
+    .hero__description {
+        font-size: 0.9rem;
+    }
+
+    .hero__actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .button {
+        justify-content: center;
+    }
+
+    .section-placeholder {
+        min-height: 70vh;
+    }
+
+}
