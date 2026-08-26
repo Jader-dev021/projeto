@@ -1,0 +1,333 @@
+/* =========================================================
+   INSIGNER — COMPONENTS
+   ========================================================= */
+
+
+/* ==================== NAVBAR ==================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(5, 5, 5, 0.75);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar__container {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==================== LOGO ==================== */
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.navbar__link {
+    position: relative;
+
+    color: var(--gray);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.navbar__link::after {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--red);
+
+    transition: width 0.3s ease;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+    color: var(--white);
+}
+
+.navbar__link:hover::after,
+.navbar__link.active::after {
+    width: 100%;
+}
+
+
+/* ==================== NAVBAR CTA ==================== */
+
+.navbar__cta {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--border);
+
+    font-size: 0.8rem;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar__cta span {
+    color: var(--red);
+}
+
+.navbar__cta:hover {
+    background: rgba(255, 255, 255, 0.05);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================== MOBILE MENU BUTTON ==================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 18px;
+    height: 1px;
+
+    background: var(--white);
+
+    transition: transform 0.3s ease;
+}
+
+
+/* ==================== BUTTONS ==================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px 22px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.button span {
+    color: var(--red);
+
+    transition: transform 0.3s ease;
+}
+
+.button:hover span {
+    transform: translate(3px, -3px);
+}
+
+.button--primary {
+    background: var(--white);
+
+    color: var(--black);
+}
+
+.button--primary:hover {
+    transform: translateY(-3px);
+
+    background: var(--red);
+
+    color: white;
+}
+
+.button--primary:hover span {
+    color: white;
+}
+
+.button--secondary {
+    border: 1px solid var(--border);
+
+    color: var(--white);
+}
+
+.button--secondary:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ==================== SECTION LABEL ==================== */
+
+.section-label {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 100px;
+
+    color: var(--gray);
+
+    font-size: 0.68rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.14em;
+}
+
+.section-label__number {
+    color: var(--red);
+}
+
+.section-label__line {
+    width: 45px;
+    height: 1px;
+
+    background: var(--gray-dark);
+}
+
+
+/* ==================== ABOUT MARK ==================== */
+
+.about__mark {
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 35px;
+}
+
+.about__mark span {
+    display: block;
+
+    width: 5px;
+    height: 5px;
+
+    background: var(--red);
+
+    transform: rotate(45deg);
+}
+
+.about__mark span:nth-child(2) {
+    opacity: 0.5;
+}
+
+.about__mark span:nth-child(3) {
+    opacity: 0.2;
+}
+
+
+/* ==================== ABOUT LINK ==================== */
+
+.about__link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--gray-dark);
+
+    color: var(--white);
+
+    font-size: 0.78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        border-color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.about__link-arrow {
+    color: var(--red);
+
+    transition: transform 0.3s ease;
+}
+
+.about__link:hover {
+    gap: 22px;
+
+    border-color: var(--red);
+}
+
+.about__link:hover .about__link-arrow {
+    transform: translate(3px, -3px);
+}
