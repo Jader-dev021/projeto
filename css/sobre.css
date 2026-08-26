@@ -1,0 +1,446 @@
+/* =========================================================
+   INSIGNER — SOBRE
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT — HERO
+   ========================================================= */
+
+.about {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 160px 0 100px;
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+}
+
+
+/* Conteúdo principal */
+
+.about__content {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.6fr);
+
+    gap: 100px;
+    align-items: end;
+
+    margin-top: 100px;
+}
+
+
+/* =========================================================
+   ABOUT — TÍTULO
+   ========================================================= */
+
+.about__title {
+    max-width: 1000px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(
+        4rem,
+        8vw,
+        8.5rem
+    );
+
+    line-height: 0.86;
+
+    letter-spacing: -0.075em;
+
+    font-weight: 600;
+}
+
+
+/* Palavra vazada */
+
+.about__title span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(245, 245, 245, 0.45);
+}
+
+
+/* Última linha */
+
+.about__title strong {
+    display: block;
+
+    color: var(--white);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ABOUT — INFORMAÇÕES
+   ========================================================= */
+
+.about__info {
+    max-width: 420px;
+    padding-bottom: 8px;
+}
+
+
+/* Marca visual */
+
+.about__mark {
+    display: flex;
+
+    gap: 6px;
+
+    margin-bottom: 45px;
+}
+
+
+.about__mark span {
+    display: block;
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--red);
+
+    transform: skewX(-25deg);
+}
+
+
+/* Textos */
+
+.about__description {
+    margin-bottom: 25px;
+
+    color: var(--white);
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+}
+
+
+.about__description--muted {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   ABOUT — LINK
+   ========================================================= */
+
+.about__link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    color: var(--white);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.about__link:hover {
+    color: var(--red);
+}
+
+
+/* Caixa da seta */
+
+.about__link-arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.about__link:hover .about__link-arrow {
+    background: var(--red);
+
+    border-color: var(--red);
+
+    color: var(--white);
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   ABOUT — FOOTER
+   ========================================================= */
+
+.about__footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 150px;
+
+    color: var(--gray);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+}
+
+
+.about__footer-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+/* =========================================================
+   MANIFESTO
+   ========================================================= */
+
+.about-manifesto {
+    padding: 180px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.about-manifesto__content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.6fr);
+
+    gap: 100px;
+
+    margin-top: 100px;
+
+    align-items: end;
+}
+
+
+.about-manifesto__content h2 {
+    max-width: 900px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(
+        4rem,
+        7vw,
+        8rem
+    );
+
+    line-height: 0.87;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 600;
+}
+
+
+.about-manifesto__content h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(245, 245, 245, 0.45);
+}
+
+
+.about-manifesto__content p {
+    max-width: 300px;
+
+    color: var(--gray);
+
+    font-size: 1.1rem;
+
+    line-height: 2;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.about-values {
+    padding: 180px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.about-values__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    margin-top: 100px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   VALUE CARD
+   ========================================================= */
+
+.value {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 45px;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* Linha vertical */
+
+.value:nth-child(odd) {
+    border-right: 1px solid var(--border);
+}
+
+
+/* Hover */
+
+.value:hover {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.025
+    );
+}
+
+
+/* Número */
+
+.value__number {
+    display: block;
+
+    margin-bottom: 70px;
+
+    color: var(--red);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Título */
+
+.value h3 {
+    margin-bottom: 20px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* Descrição */
+
+.value p {
+    max-width: 420px;
+
+    color: var(--gray);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.about-cta {
+    padding: 180px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.about-cta .container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.about-cta h2 {
+    margin: 35px 0 50px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: clamp(
+        5rem,
+        11vw,
+        11rem
+    );
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+
+    font-weight: 600;
+}
+
+
+.about-cta h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(245, 245, 245, 0.5);
+}

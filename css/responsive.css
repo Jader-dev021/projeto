@@ -3,19 +3,23 @@
    ========================================================= */
 
 
-/* ==================== TABLET ==================== */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 900px) {
 
+    /* ==================== CONTAINER ==================== */
+
     .container {
         width: min(
-            calc(100% - 40px),
+            calc(100% - 48px),
             var(--container)
         );
     }
 
 
-    /* NAVBAR */
+    /* ==================== NAVBAR ==================== */
 
     .navbar__menu,
     .navbar__cta {
@@ -27,22 +31,38 @@
     }
 
 
-    /* HERO */
+    /* ==================== HERO ==================== */
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero__container {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
 
     .hero__title {
         font-size: clamp(
             4rem,
-            14vw,
-            7rem
+            12vw,
+            8rem
         );
     }
 
     .hero__bottom {
         flex-direction: column;
-
         align-items: flex-start;
+        gap: 40px;
+        margin-top: 60px;
+    }
 
-        margin-top: 50px;
+    .hero__description {
+        max-width: 500px;
+    }
+
+    .hero__actions {
+        width: 100%;
     }
 
     .hero__scroll {
@@ -50,20 +70,299 @@
     }
 
 
-    /* ABOUT */
+    /* ==================== ABOUT PREVIEW ==================== */
 
-    .about {
+    .home-about {
         padding: 120px 0;
     }
 
-    .section-label {
+    .home-about__content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 70px;
+    }
+
+    .home-about__content h2 {
+        font-size: clamp(
+            3.8rem,
+            11vw,
+            7rem
+        );
+    }
+
+    .home-about__content > div:last-child {
+        max-width: 500px;
+    }
+
+
+    /* ==================== SERVICES ==================== */
+
+    .home-services {
+        padding: 120px 0;
+    }
+
+    .home-services__heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 70px;
         margin-bottom: 70px;
+    }
+
+    .home-services__heading h2 {
+        font-size: clamp(
+            3.8rem,
+            11vw,
+            7rem
+        );
+    }
+
+
+    /* ==================== PROJECTS ==================== */
+
+    .home-projects {
+        padding: 120px 0;
+    }
+
+    .home-projects__heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 70px;
+        margin-bottom: 60px;
+    }
+
+    .home-projects__heading h2 {
+        font-size: clamp(
+            3.8rem,
+            11vw,
+            7rem
+        );
+    }
+
+    .home-projects__placeholder {
+        min-height: 400px;
+    }
+
+
+    /* ==================== CTA ==================== */
+
+    .home-cta {
+        padding: 120px 0;
+    }
+
+    .home-cta h2 {
+        font-size: clamp(
+            4.5rem,
+            14vw,
+            9rem
+        );
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ==================== CONTAINER ==================== */
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+
+    /* ==================== HERO ==================== */
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero__container {
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .hero__title {
+        font-size: clamp(
+            3.4rem,
+            17vw,
+            5.8rem
+        );
+
+        line-height: 0.86;
+    }
+
+    .hero__bottom {
+        gap: 35px;
+        margin-top: 50px;
+    }
+
+    .hero__description {
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .hero__actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* ==================== ABOUT PREVIEW ==================== */
+
+    .home-about {
+        padding: 90px 0;
+    }
+
+    .home-about__content {
+        gap: 40px;
+        margin-top: 55px;
+    }
+
+    .home-about__content h2 {
+        font-size: clamp(
+            3rem,
+            15vw,
+            5rem
+        );
+
+        line-height: 0.88;
+    }
+
+    .home-about__content p {
+        font-size: 0.9rem;
+    }
+
+
+    /* ==================== SERVICES ==================== */
+
+    .home-services {
+        padding: 90px 0;
+    }
+
+    .home-services__heading {
+        gap: 30px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+    }
+
+    .home-services__heading h2 {
+        font-size: clamp(
+            3rem,
+            15vw,
+            5rem
+        );
+    }
+
+    .home-service {
+        grid-template-columns:
+            30px
+            minmax(0, 1fr)
+            20px;
+
+        gap: 12px;
+        min-height: 90px;
+    }
+
+    .home-service strong {
+        font-size: 1.05rem;
+        line-height: 1.2;
+    }
+
+    .home-service > span:first-child {
+        font-size: 0.6rem;
+    }
+
+    .home-service > span:last-child {
+        font-size: 1rem;
+    }
+
+
+    /* ==================== PROJECTS ==================== */
+
+    .home-projects {
+        padding: 90px 0;
+    }
+
+    .home-projects__heading {
+        gap: 30px;
+        margin-top: 55px;
+        margin-bottom: 50px;
+    }
+
+    .home-projects__heading h2 {
+        font-size: clamp(
+            3rem,
+            15vw,
+            5rem
+        );
+    }
+
+    .home-projects__placeholder {
+        min-height: 260px;
+    }
+
+
+    /* ==================== CTA ==================== */
+
+    .home-cta {
+        padding: 90px 0;
+    }
+
+    .home-cta h2 {
+        font-size: clamp(
+            3.8rem,
+            19vw,
+            6.5rem
+        );
+
+        line-height: 0.84;
+    }
+
+
+    /* ==================== FOOTER ==================== */
+
+    .footer {
+        padding: 28px 0;
+    }
+
+}
+
+
+
+/* =========================================================
+   INSIGNER — RESPONSIVE
+   SOBRE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ==================== ABOUT ==================== */
+
+    .about {
+        min-height: auto;
+        padding: 140px 0 90px;
     }
 
     .about__content {
         grid-template-columns: 1fr;
-
         gap: 70px;
+        margin-top: 80px;
     }
 
     .about__title {
@@ -75,65 +374,83 @@
     }
 
     .about__info {
-        max-width: 500px;
+        max-width: 600px;
     }
 
     .about__footer {
         margin-top: 100px;
     }
-}
 
 
-/* ==================== MOBILE ==================== */
+    /* ==================== MANIFESTO ==================== */
 
-@media (max-width: 600px) {
-
-    .navbar__container {
-        height: 76px;
+    .about-manifesto {
+        padding: 130px 0;
     }
 
-
-    /* HERO */
-
-    .hero__container {
-        padding-top: 76px;
+    .about-manifesto__content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-top: 80px;
     }
 
-    .hero__title {
+    .about-manifesto__content h2 {
         font-size: clamp(
-            3.5rem,
-            17vw,
-            5.5rem
+            4rem,
+            12vw,
+            7rem
         );
     }
 
-    .hero__description {
-        font-size: 0.9rem;
+
+    /* ==================== VALUES ==================== */
+
+    .about-values {
+        padding: 130px 0;
     }
 
-    .hero__actions {
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: stretch;
+    .about-values__grid {
+        margin-top: 80px;
     }
 
-    .button {
-        justify-content: center;
+    .value {
+        min-height: 280px;
+        padding: 40px;
     }
 
 
-    /* ABOUT */
+    /* ==================== CTA ==================== */
+
+    .about-cta {
+        padding: 130px 0;
+    }
+
+    .about-cta h2 {
+        font-size: clamp(
+            5rem,
+            15vw,
+            9rem
+        );
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ==================== ABOUT ==================== */
 
     .about {
-        min-height: auto;
-
-        padding: 100px 0;
+        padding: 120px 0 70px;
     }
 
-    .section-label {
-        margin-bottom: 55px;
+    .about__content {
+        gap: 50px;
+        margin-top: 60px;
     }
 
     .about__title {
@@ -142,10 +459,16 @@
             16vw,
             5rem
         );
+
+        line-height: 0.88;
     }
 
-    .about__content {
-        gap: 55px;
+    .about__info {
+        max-width: 100%;
+    }
+
+    .about__mark {
+        margin-bottom: 35px;
     }
 
     .about__description {
@@ -153,6 +476,746 @@
     }
 
     .about__footer {
+        margin-top: 70px;
+        gap: 12px;
+    }
+
+    .about__footer-line {
+        width: 50px;
+    }
+
+
+    /* ==================== MANIFESTO ==================== */
+
+    .about-manifesto {
+        padding: 100px 0;
+    }
+
+    .about-manifesto__content {
+        gap: 45px;
+        margin-top: 60px;
+    }
+
+    .about-manifesto__content h2 {
+        font-size: clamp(
+            3.4rem,
+            16vw,
+            5rem
+        );
+    }
+
+    .about-manifesto__content p {
+        font-size: 0.9rem;
+    }
+
+
+    /* ==================== VALUES ==================== */
+
+    .about-values {
+        padding: 100px 0;
+    }
+
+    .about-values__grid {
+        grid-template-columns: 1fr;
+        margin-top: 60px;
+    }
+
+    .value {
+        min-height: auto;
+        padding: 35px 25px;
+    }
+
+    .value:nth-child(odd) {
+        border-right: none;
+    }
+
+    .value__number {
+        margin-bottom: 45px;
+    }
+
+    .value h3 {
+        font-size: 1.7rem;
+    }
+
+
+    /* ==================== CTA ==================== */
+
+    .about-cta {
+        padding: 100px 0;
+    }
+
+    .about-cta h2 {
+        font-size: clamp(
+            4.5rem,
+            20vw,
+            7rem
+        );
+    }
+
+}
+
+
+
+/* =========================================================
+   SERVIÇOS — RESPONSIVE
+   ========================================================= */
+
+
+@media (max-width: 900px) {
+
+    /* ==================== HERO ==================== */
+
+    .services-hero {
+
+        min-height: auto;
+
+        padding:
+            140px 0
+            80px;
+
+    }
+
+
+    .services-hero__content {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-top: 70px;
+
+    }
+
+
+    .services-hero__title {
+
+        font-size:
+            clamp(
+                4rem,
+                12vw,
+                8rem
+            );
+
+    }
+
+
+    .services-hero__bottom {
+
+        margin-top: 70px;
+
+    }
+
+
+    /* ==================== SERVICES ==================== */
+
+    .services {
+
+        padding: 120px 0;
+
+    }
+
+
+    .service {
+
+        grid-template-columns:
+            50px
+            minmax(0, 1fr)
+            50px;
+
+        gap: 25px;
+
+        min-height: 220px;
+
+    }
+
+
+    .service__title {
+
+        font-size:
+            clamp(
+                2.2rem,
+                7vw,
+                4rem
+            );
+
+    }
+
+
+    /* ==================== PROCESS ==================== */
+
+    .process {
+
+        padding: 120px 0;
+
+    }
+
+
+    .process__heading {
+
+        margin-top: 70px;
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .process__heading h2 {
+
+        font-size:
+            clamp(
+                4rem,
+                12vw,
+                7rem
+            );
+
+    }
+
+
+    .process__grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .process__item:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .process__item:nth-child(1),
+    .process__item:nth-child(2) {
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    /* ==================== CTA ==================== */
+
+    .services-cta {
+
+        padding: 120px 0;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* ==================== HERO ==================== */
+
+    .services-hero {
+
+        padding:
+            120px 0
+            60px;
+
+    }
+
+
+    .services-hero__title {
+
+        font-size:
+            clamp(
+                3.5rem,
+                16vw,
+                6rem
+            );
+
+    }
+
+
+    .services-hero__description {
+
+        max-width: 100%;
+
+    }
+
+
+    .services-hero__bottom {
+
+        margin-top: 60px;
+
+    }
+
+
+    /* ==================== SERVICES ==================== */
+
+    .services {
+
+        padding: 100px 0;
+
+    }
+
+
+    .service {
+
+        grid-template-columns:
+            30px
+            minmax(0, 1fr)
+            40px;
+
+        gap: 15px;
+
+        min-height: 0;
+
+        padding: 35px 0;
+
+    }
+
+
+    .service:hover {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+
+    .service__title {
+
+        font-size:
+            clamp(
+                1.8rem,
+                8vw,
+                3rem
+            );
+
+    }
+
+
+    .service__description {
+
+        font-size: 0.82rem;
+
+    }
+
+
+    .service__action {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    /* ==================== PROCESS ==================== */
+
+    .process {
+
+        padding: 100px 0;
+
+    }
+
+
+    .process__heading {
+
+        margin-top: 60px;
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .process__heading h2 {
+
+        font-size:
+            clamp(
+                3.4rem,
+                16vw,
+                5rem
+            );
+
+    }
+
+
+    .process__grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .process__item {
+
+        min-height: auto;
+
+        padding: 30px 0;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    .process__item:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .process__item:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .process__item h3 {
+
+        margin-top: 40px;
+
+    }
+
+
+    /* ==================== CTA ==================== */
+
+    .services-cta {
+
+        padding: 100px 0;
+
+    }
+
+
+    .services-cta h2 {
+
+        font-size:
+            clamp(
+                4.5rem,
+                20vw,
+                7rem
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   PROJETOS — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .projects-hero {
+
+        min-height: auto;
+
+        padding:
+            140px 0
+            90px;
+
+    }
+
+
+    .projects-hero__content {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-top: 70px;
+
+    }
+
+
+    .projects-hero h1 {
+
+        font-size:
+            clamp(
+                4rem,
+                12vw,
+                8rem
+            );
+
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+
+        padding: 120px 0;
+
+    }
+
+
+    .projects__grid {
+
+        gap: 70px 25px;
+
+    }
+
+
+    .project-card__info {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .project-card__info p {
+
+        max-width: 350px;
+
+    }
+
+
+    /* CTA */
+
+    .projects-cta {
+
+        padding: 120px 0;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .projects-hero {
+
+        padding:
+            120px 0
+            70px;
+
+    }
+
+
+    .projects-hero h1 {
+
+        font-size:
+            clamp(
+                3.5rem,
+                16vw,
+                6rem
+            );
+
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+
+        padding: 100px 0;
+
+    }
+
+
+    .projects__grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-top: 45px;
+
+    }
+
+
+    .project-card__image {
+
+        aspect-ratio: 1 / 0.85;
+
+    }
+
+
+    .project-card__arrow {
+
+        width: 42px;
+
+        height: 42px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+
+    .project-card__number {
+
+        top: 15px;
+
+        left: 15px;
+
+    }
+
+
+    .project-card__info h2 {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    /* CTA */
+
+    .projects-cta {
+
+        padding: 100px 0;
+
+    }
+
+
+    .projects-cta h2 {
+
+        font-size:
+            clamp(
+                4.5rem,
+                20vw,
+                7rem
+            );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CONTACT — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact {
+
+        padding: 140px 0 90px;
+    }
+
+
+    .contact__intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
         margin-top: 80px;
+    }
+
+
+    .contact__title {
+
+        font-size: clamp(
+            4rem,
+            12vw,
+            7rem
+        );
+    }
+
+
+    .contact__content {
+
+        grid-template-columns: 1fr;
+
+        gap: 90px;
+
+        margin-top: 100px;
+    }
+
+
+    .contact__info {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 30px;
+    }
+
+
+    .contact__footer {
+
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .contact {
+
+        padding: 110px 0 70px;
+    }
+
+
+    .contact__intro {
+
+        gap: 45px;
+
+        margin-top: 60px;
+    }
+
+
+    .contact__title {
+
+        font-size: clamp(
+            3.5rem,
+            16vw,
+            5.5rem
+        );
+    }
+
+
+    .contact__description {
+
+        font-size: 0.9rem;
+    }
+
+
+    .contact__content {
+
+        gap: 70px;
+
+        margin-top: 80px;
+    }
+
+
+    .contact__info {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .contact__form {
+
+        gap: 35px;
+    }
+
+
+    .contact__footer {
+
+        margin-top: 80px;
+
+        gap: 12px;
+    }
+
+
+    .contact__footer-line {
+
+        width: 50px;
     }
 }
