@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -19,14 +18,16 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
 
-
 <body>
 
-    <!-- ==================== NAVBAR ==================== -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header class="navbar">
 
@@ -35,7 +36,6 @@
             <a href="index.html" class="logo">
                 INSIGNER<span>.</span>
             </a>
-
 
             <nav class="navbar__menu">
 
@@ -76,24 +76,21 @@
 
             </nav>
 
-
             <a
                 href="contato.html"
                 class="navbar__cta"
             >
-                Vamos conversar <span>↗</span>
+                Vamos conversar
+                <span>↗</span>
             </a>
-
 
             <button
                 class="menu-toggle"
                 aria-label="Abrir menu"
                 aria-expanded="false"
             >
-
                 <span></span>
                 <span></span>
-
             </button>
 
         </div>
@@ -101,13 +98,11 @@
     </header>
 
 
-
-    <!-- ==================== MAIN ==================== -->
-
     <main>
 
-
-        <!-- ==================== HERO ==================== -->
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
         <section class="hero">
 
@@ -117,12 +112,34 @@
 
                 <div class="hero__glow"></div>
 
+                <div class="hero__noise"></div>
+
+            </div>
+
+
+            <div class="hero__coordinates">
+
+                <span>19° 32' 08" S</span>
+
+                <span>40° 37' 50" W</span>
+
+            </div>
+
+
+            <div class="hero__status">
+
+                <span class="hero__status-dot"></span>
+
+                <span>
+                    AVAILABLE FOR PROJECTS
+                </span>
+
             </div>
 
 
             <div class="container hero__container">
 
-                <div class="section-label">
+                <div class="section-label hero__label">
 
                     <span class="section-label__number">
                         00
@@ -137,28 +154,40 @@
                 </div>
 
 
-                <h1 class="hero__title">
+                <div class="hero__headline">
 
-                    IDEIAS QUE
-
-                    <span>
-                        VIRAM
+                    <span class="hero__eyebrow">
+                        STRATEGY / DESIGN / TECHNOLOGY
                     </span>
 
-                    IMPACTO.
+                    <h1 class="hero__title">
 
-                </h1>
+                        IDEIAS QUE
+
+                        <span>VIRAM</span>
+
+                        IMPACTO.
+
+                    </h1>
+
+                </div>
 
 
                 <div class="hero__bottom">
 
-                    <p class="hero__description">
+                    <div class="hero__description-wrap">
 
-                        Criamos experiências digitais,
-                        estratégias e marcas que conectam
-                        negócios às pessoas.
+                        <span class="hero__description-number">
+                            01
+                        </span>
 
-                    </p>
+                        <p class="hero__description">
+                            Criamos experiências digitais,
+                            estratégias e marcas que conectam
+                            negócios às pessoas.
+                        </p>
+
+                    </div>
 
 
                     <div class="hero__actions">
@@ -170,7 +199,6 @@
                             Ver projetos
                             <span>↗</span>
                         </a>
-
 
                         <a
                             href="contato.html"
@@ -187,7 +215,9 @@
 
                 <div class="hero__scroll">
 
-                    <span>Scroll para explorar</span>
+                    <span class="hero__scroll-text">
+                        Scroll para explorar
+                    </span>
 
                     <span class="hero__scroll-line"></span>
 
@@ -195,11 +225,17 @@
 
             </div>
 
+
+            <div class="hero__corner hero__corner--top"></div>
+
+            <div class="hero__corner hero__corner--bottom"></div>
+
         </section>
 
 
-
-        <!-- ==================== PREVIEW SOBRE ==================== -->
+        <!-- =====================================================
+             ABOUT PREVIEW
+        ====================================================== -->
 
         <section class="home-about">
 
@@ -222,19 +258,40 @@
 
                 <div class="home-about__content">
 
-                    <h2>
-                        NÃO SEGUIMOS
-                        <span>TENDÊNCIAS.</span>
-                        CRIAMOS ELAS.
-                    </h2>
+                    <div class="home-about__headline">
+
+                        <span class="home-about__eyebrow">
+                            BEYOND DIGITAL
+                        </span>
+
+                        <h2>
+
+                            NÃO SEGUIMOS
+
+                            <span>TENDÊNCIAS.</span>
+
+                            CRIAMOS ELAS.
+
+                        </h2>
+
+                    </div>
 
 
-                    <div>
+                    <div class="home-about__info">
 
-                        <p>
+                        <span class="home-about__number">
+                            01 / 04
+                        </span>
+
+                        <p class="home-about__description">
                             A Insigner transforma ideias em
                             experiências digitais que realmente
                             importam.
+                        </p>
+
+                        <p class="home-about__description muted">
+                            Estratégia, criatividade e tecnologia
+                            trabalhando no mesmo lugar.
                         </p>
 
                         <a
@@ -242,134 +299,242 @@
                             class="about__link"
                         >
                             Conheça a Insigner
+
                             <span class="about__link-arrow">
                                 ↗
                             </span>
+
                         </a>
 
                     </div>
 
                 </div>
 
+
+                <div class="home-about__footer">
+
+                    <span>
+                        STRATEGY
+                    </span>
+
+                    <span class="home-about__footer-line"></span>
+
+                    <span>
+                        DESIGN
+                    </span>
+
+                    <span class="home-about__footer-line"></span>
+
+                    <span>
+                        TECHNOLOGY
+                    </span>
+
+                </div>
+
             </div>
 
         </section>
 
 
-
-        <!-- ==================== PREVIEW SERVIÇOS ==================== -->
-
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
         <section class="home-services">
-
+        
             <div class="container">
-
+            
                 <div class="section-label">
-
                     <span class="section-label__number">
                         02
                     </span>
-
+                
                     <span class="section-label__line"></span>
-
+                
                     <span class="section-label__text">
                         O que fazemos
                     </span>
-
                 </div>
-
-
+            
+            
                 <div class="home-services__heading">
-
-                    <h2>
-                        O QUE
-                        <span>FAZEMOS.</span>
-                    </h2>
-
+                
+                    <div>
+                        <span class="home-services__eyebrow">
+                            NOSSAS ESPECIALIDADES
+                        </span>
+                    
+                        <h2>
+                            O QUE
+                            <span>FAZEMOS.</span>
+                        </h2>
+                    </div>
+                
+                
+                    <div class="home-services__intro">
+                    
+                        <span class="home-services__intro-number">
+                            04
+                        </span>
+                    
+                        <p>
+                            Diferentes disciplinas.
+                            Um único objetivo:
+                            fazer sua marca avançar.
+                        </p>
+                    
+                    </div>
+                
+                </div>
+            
+            
+                <div class="home-services__list">
+                
+                    <!-- 01 -->
                     <a
                         href="servicos.html"
-                        class="button button--secondary"
+                        class="home-service"
+                    >
+                
+                        <span class="home-service__number">
+                            01
+                        </span>
+                    
+                        <div class="home-service__content">
+                                                                        
+                            <strong>
+                                Desenvolvimento Web
+                            </strong>
+                        
+                            <p>
+                                Sites, aplicações e experiências
+                                digitais desenvolvidas para performar.
+                            </p>
+                        
+                        </div>
+                    
+                        <span class="home-service__arrow">
+                            ↗
+                        </span>
+                    
+                    </a>
+                
+                
+                    <!-- 02 -->
+                    <a
+                        href="servicos.html"
+                        class="home-service"
+                    >
+                
+                        <span class="home-service__number">
+                            02
+                        </span>
+                    
+                        <div class="home-service__content">
+                                                                  
+                            <strong>
+                                Marketing Digital
+                            </strong>
+                        
+                            <p>
+                                Estratégias digitais para transformar
+                                atenção em crescimento.
+                            </p>
+                        
+                        </div>
+                    
+                        <span class="home-service__arrow">
+                            ↗
+                        </span>
+                    
+                    </a>
+                
+                
+                    <!-- 03 -->
+                    <a
+                        href="servicos.html"
+                        class="home-service"
+                    >
+                
+                        <span class="home-service__number">
+                            03
+                        </span>
+                    
+                        <div class="home-service__content">
+                                                                        
+                            <strong>
+                                Conteúdo & Vídeo
+                            </strong>
+                        
+                            <p>
+                                Conteúdo visual pensado para comunicar,
+                                envolver e permanecer.
+                            </p>
+                        
+                        </div>
+                    
+                        <span class="home-service__arrow">
+                            ↗
+                        </span>
+                    
+                    </a>
+                
+                
+                    <!-- 04 -->
+                    <a
+                        href="servicos.html"
+                        class="home-service"
+                    >
+                
+                        <span class="home-service__number">
+                            04
+                        </span>
+                    
+                        <div class="home-service__content">
+                                                                        
+                            <strong>
+                                Branding
+                            </strong>
+                        
+                            <p>
+                                Identidades que transformam negócios
+                                em marcas reconhecíveis.
+                            </p>
+                        
+                        </div>
+                    
+                        <span class="home-service__arrow">
+                            ↗
+                        </span>
+                    
+                    </a>
+                
+                </div>
+            
+            
+                <div class="home-services__bottom">
+                                
+                    <a
+                        href="servicos.html"
+                        class="about__link"
                     >
                         Ver todos os serviços
-                        <span>↗</span>
+                
+                        <span class="about__link-arrow">
+                            ↗
+                        </span>
+                    
                     </a>
-
+                
                 </div>
-
-
-                <div class="home-services__list">
-
-                    <a
-                        href="servicos.html"
-                        class="home-service"
-                    >
-
-                        <span>01</span>
-
-                        <strong>
-                            Desenvolvimento Web
-                        </strong>
-
-                        <span>↗</span>
-
-                    </a>
-
-
-                    <a
-                        href="servicos.html"
-                        class="home-service"
-                    >
-
-                        <span>02</span>
-
-                        <strong>
-                            Marketing Digital
-                        </strong>
-
-                        <span>↗</span>
-
-                    </a>
-
-
-                    <a
-                        href="servicos.html"
-                        class="home-service"
-                    >
-
-                        <span>03</span>
-
-                        <strong>
-                            Conteúdo & Vídeo
-                        </strong>
-
-                        <span>↗</span>
-
-                    </a>
-
-
-                    <a
-                        href="servicos.html"
-                        class="home-service"
-                    >
-
-                        <span>04</span>
-
-                        <strong>
-                            Branding
-                        </strong>
-
-                        <span>↗</span>
-
-                    </a>
-
-                </div>
-
+            
             </div>
-
+        
         </section>
 
 
-
-        <!-- ==================== PREVIEW PROJETOS ==================== -->
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
 
         <section class="home-projects">
 
@@ -392,29 +557,158 @@
 
                 <div class="home-projects__heading">
 
-                    <h2>
-                        FEITO PARA
-                        <span>IMPOSSÍVEL.</span>
-                    </h2>
+                    <div>
 
-                    <a
-                        href="projetos.html"
-                        class="about__link"
-                    >
-                        Ver projetos
-                        <span class="about__link-arrow">
-                            ↗
+                        <span class="home-projects__eyebrow">
+                            SELECTED WORK
                         </span>
-                    </a>
+
+                        <h2>
+
+                            FEITO PARA
+
+                            <span>IMPOSSÍVEL.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="home-projects__meta">
+
+                        <span>
+                            2026 — PRESENT
+                        </span>
+
+                        <p>
+                            Alguns trabalhos dizem mais
+                            do que qualquer apresentação.
+                        </p>
+
+                    </div>
 
                 </div>
 
 
-                <div class="home-projects__placeholder">
+                <div class="home-projects__grid">
 
-                    <span>
-                        PROJETOS EM BREVE
-                    </span>
+                    <a
+                        href="projetos.html"
+                        class="project-card project-card--large"
+                    >
+
+                        <div class="project-card__visual">
+
+                            <span class="project-card__index">
+                                01
+                            </span>
+
+                            <span class="project-card__status">
+                                CASE STUDY
+                            </span>
+
+                            <div class="project-card__placeholder">
+                                INSIGNER
+                            </div>
+
+                            <span class="project-card__arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__info">
+
+                            <div>
+
+                                <span>
+                                    DIGITAL EXPERIENCE
+                                </span>
+
+                                <h3>
+                                    Projeto em destaque
+                                </h3>
+
+                            </div>
+
+                            <span>
+                                2026
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="home-projects__side">
+
+                        <div class="project-mini">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <span>
+                                    BRANDING
+                                </span>
+
+                                <strong>
+                                    Próximo projeto
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-mini">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <span>
+                                    WEB / CODE
+                                </span>
+
+                                <strong>
+                                    Próximo projeto
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="projetos.html"
+                            class="home-projects__all"
+                        >
+
+                            <span>
+                                VIEW ALL PROJECTS
+                            </span>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -423,31 +717,68 @@
         </section>
 
 
-
-        <!-- ==================== CTA ==================== -->
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
 
         <section class="home-cta">
 
+            <div class="home-cta__background">
+
+                <span></span>
+                <span></span>
+
+            </div>
+
+
             <div class="container">
 
-                <span class="section-label__text">
-                    04 — Vamos criar algo?
+                <div class="section-label">
+
+                    <span class="section-label__number">
+                        04
+                    </span>
+
+                    <span class="section-label__line"></span>
+
+                    <span class="section-label__text">
+                        Vamos criar algo?
+                    </span>
+
+                </div>
+
+
+                <span class="home-cta__eyebrow">
+                    HAVE AN IDEA?
                 </span>
 
 
                 <h2>
+
                     TEM UMA
+
                     <span>IDEIA?</span>
+
                 </h2>
 
 
-                <a
-                    href="contato.html"
-                    class="button button--primary"
-                >
-                    Começar um projeto
-                    <span>↗</span>
-                </a>
+                <div class="home-cta__bottom">
+
+                    <p>
+                        Vamos transformar sua próxima ideia
+                        em algo que as pessoas não consigam ignorar.
+                    </p>
+
+
+                    <a
+                        href="contato.html"
+                        class="button button--primary"
+                    >
+                        Começar um projeto
+                        <span>↗</span>
+                    </a>
+
+                </div>
 
             </div>
 
@@ -456,24 +787,47 @@
     </main>
 
 
-
-    <!-- ==================== FOOTER ==================== -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer class="footer">
 
-        <div class="container">
+        <div class="container footer__container">
 
-            <p>
-                © 2026 Insigner. Todos os direitos reservados.
-            </p>
+            <div class="footer__brand">
+
+                <span class="logo">
+                    INSIGNER<span>.</span>
+                </span>
+
+                <p>
+                    Strategy / Design / Technology
+                </p>
+
+            </div>
+
+
+            <div class="footer__right">
+
+                <span>
+                    © 2026 Insigner
+                </span>
+
+                <span>
+                    All rights reserved.
+                </span>
+
+            </div>
 
         </div>
 
     </footer>
 
 
-
-    <!-- ==================== SCRIPTS ==================== -->
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
 
     <script src="../js/navbar.js"></script>
     <script src="../js/animations.js"></script>
