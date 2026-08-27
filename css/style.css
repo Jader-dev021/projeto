@@ -107,3 +107,74 @@ img {
 .text-gray {
     color: var(--gray);
 }
+
+/* =========================================================
+   CTA — PALAVRA INTERATIVA
+   ========================================================= */
+
+.about-cta h2 span,
+.home-cta h2 span {
+    display: block;
+    cursor: default;
+
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(245, 245, 245, 0.5);
+
+    transition:
+        color 0.4s ease,
+        -webkit-text-stroke-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.about-cta h2 span:hover,
+.home-cta h2 span:hover {
+    color: var(--red);
+    -webkit-text-stroke-color: var(--red);
+
+    transform: translateX(10px);
+}
+
+
+/* =========================================================
+   INSIGNER — TÍTULOS INTERATIVOS
+   ========================================================= */
+
+.title-interactive {
+    position: relative;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(245, 245, 245, 0.55);
+    transition:
+        color 0.4s ease,
+        -webkit-text-stroke-color 0.4s ease,
+        transform 0.4s ease;
+    cursor: default;
+}
+
+/* Camada vermelha */
+.title-interactive::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: var(--red);
+    -webkit-text-stroke: 0;
+    clip-path: inset(100% 0 0 0);
+    transition:
+        clip-path 0.5s cubic-bezier(
+            0.77,
+            0,
+            0.18,
+            1
+        );
+    pointer-events: none;
+}
+
+/* Hover */
+.title-interactive:hover {
+    -webkit-text-stroke-color: var(--red);
+    transform: translateX(8px);
+}
+
+.title-interactive:hover::before {
+    clip-path: inset(0 0 0 0);
+}
